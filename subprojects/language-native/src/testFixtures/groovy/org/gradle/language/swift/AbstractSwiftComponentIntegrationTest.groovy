@@ -89,8 +89,6 @@ abstract class AbstractSwiftComponentIntegrationTest extends AbstractNativeLangu
     }
 
     @RequiresInstalledToolChain(ToolChainRequirement.SWIFTC_4)
-    @ToBeFixedForConfigurationCache
-    @Ignore('https://github.com/gradle/gradle-private/issues/3369')
     def "can build Swift 3 source code on Swift 4 compiler"() {
         given:
         makeSingleProject()
@@ -295,8 +293,6 @@ abstract class AbstractSwiftComponentIntegrationTest extends AbstractNativeLangu
     }
 
     @RequiresInstalledToolChain(ToolChainRequirement.SWIFTC_4)
-    @ToBeFixedForConfigurationCache
-    @Ignore("https://github.com/gradle/gradle-private/issues/3369")
     def "can compile Swift 4 component on Swift 4 compiler"() {
         given:
         makeSingleProject()
