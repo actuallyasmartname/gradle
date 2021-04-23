@@ -18,18 +18,13 @@
 package gradlebuild.binarycompatibility.transforms
 
 import groovy.transform.CompileStatic
-import org.gradle.api.artifacts.transform.InputArtifact
-import org.gradle.api.artifacts.transform.TransformAction
-import org.gradle.api.artifacts.transform.TransformOutputs
-import org.gradle.api.artifacts.transform.TransformParameters
+import org.gradle.api.artifacts.transform.*
 import org.gradle.api.file.FileSystemLocation
 import org.gradle.api.provider.Provider
-import org.gradle.api.tasks.PathSensitive
-import org.gradle.api.tasks.PathSensitivity
+import org.gradle.api.tasks.*
 
 import java.nio.file.Files
-import java.util.zip.ZipEntry
-import java.util.zip.ZipInputStream
+import java.util.zip.*
 
 @CompileStatic
 abstract class ExplodeZipAndFindJars implements TransformAction<TransformParameters.None> {
